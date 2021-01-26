@@ -22,9 +22,9 @@
           background-image: url("img/desktop-images/catalog-desktop.jpg");
         }
       }
-      body {
+      /*body {
         opacity: 0.5;
-      }
+      }*/
     </style>
   <!-- // Pixel Glass -->
   <head>
@@ -57,7 +57,7 @@
     <main class="page-main">
       <section class="catalog wrapper">
         <h1 class="catalog__title">Каталог продукции</h1>
-        <ul class="catalog__list">
+        <ul class="catalog__list catalog__grid-layout">
           <li class="catalog__item">
             <div class="catalog__card">
               <a class="catalog__card-link" href="#">
@@ -67,22 +67,22 @@
                   <img class="catalog__card-img" src="img/mobile-images/catalog-1-mobile-min.png" width="68" height="86" alt="Кошачье питание в банке">
                 </picture>
               </a>
-              <table class="catalog__card-content card">
+              <table class="catalog__card-content">
                 <caption>
                   <a class="catalog__card-link--content" href="#">
                     <h2 class="catalog__card-title">Cat energy pro 500 г</h2>
                   </a>
                 </caption>
                 <tr class="catalog__card-description">
-                  <td class="catalog__card-text">Масса</td>
+                  <td class="catalog__card-text catalog__card-text--weight">Масса</td>
                   <td class="catalog__card-text">500 г</td>
                 </tr>
                 <tr class="catalog__card-description">
-                  <td class="catalog__card-text">Вкус</td>
+                  <td class="catalog__card-text catalog__card-text--taste">Вкус</td>
                   <td class="catalog__card-text">Курица</td>
                 </tr>
                 <tr class="catalog__card-description">
-                  <td class="catalog__card-text">Цена</td>
+                  <td class="catalog__card-text catalog__card-text--price">Цена</td>
                   <td class="catalog__card-text">700 Р.</td>
                 </tr>
               </table>
@@ -284,14 +284,16 @@
           </li>
         </ul>
         <div class="catalog__extra">
-          <h2 class="catalog__extra-title">Дополнительные товары</h2>
+          <h2 class="catalog__extra-title catalog__extra-title--line">
+            <span class="catalog__extra-products">Дополнительные товары</span>
+          </h2>
           <div class="catalog__extra-inner">
-            <ul class="catalog__extra-list">
+            <ul class="catalog__extra-list catalog__grid-layout">
               <li class="catalog__extra-item">
                 <div class="catalog__extra-card card">
-                  <a class="catalog__card-link" href="#">
-                    <h3 class="catalog__extra-subtitle">Сахарозаменитель</h3>
-                  </a>
+                    <h3 class="catalog__extra-subtitle">
+                      <a class="catalog__link-extra" href="#">Сахарозаменитель</a>
+                    </h3>
                   <div class="catalog__description">
                     <p class="catalog__extra-text">1 упаковка (100 г)</p>
                     <p class="catalog__extra-text">200 Р.</p>
@@ -301,9 +303,9 @@
               </li>
               <li class="catalog__extra-item">
                 <div class="catalog__extra-card card">
-                  <a class="catalog__card-link" href="#">
-                    <h3 class="catalog__extra-subtitle">Питьевая вода</h3>
-                  </a>
+                  <h3 class="catalog__extra-subtitle">
+                    <a class="catalog__link-extra" href="#">Питьевая вода</a>
+                  </h3>
                   <div class="catalog__description">
                     <p class="catalog__extra-text">5 литров</p>
                     <p class="catalog__extra-text">50 Р.</p>
@@ -313,9 +315,9 @@
               </li>
               <li class="catalog__extra-item">
                 <div class="catalog__extra-card card">
-                  <a class="catalog__card-link" href="#">
-                    <h3 class="catalog__extra-subtitle">Молоко</h3>
-                  </a>
+                  <h3 class="catalog__extra-subtitle">
+                    <a class="catalog__link-extra" href="#">Молоко</a>
+                  </h3>
                   <div class="catalog__description">
                     <p class="catalog__extra-text">1 литр</p>
                     <p class="catalog__extra-text">100 Р.</p>
@@ -325,9 +327,9 @@
               </li>
               <li class="catalog__extra-item">
                 <div class="catalog__extra-card card">
-                  <a class="catalog__card-link" href="#">
-                    <h3 class="catalog__extra-subtitle">Витамины</h3>
-                  </a>
+                  <h3 class="catalog__extra-subtitle">
+                    <a class="catalog__link-extra" href="#">Витамины</a>
+                  </h3>
                   <div class="catalog__description">
                     <p class="catalog__extra-text">1 упаковка (30 г)</p>
                     <p class="catalog__extra-text">300 Р.</p>
@@ -344,13 +346,17 @@
           </div>
         </div>
       </section>
-      <section class="contacts contacts__inner">
-        <div class="wrapper contacts__wrapper">
+      <section class="contacts">
+        <div class="contacts__wrapper">
           <div class="contacts__text-block">
-            <h3 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h3>
+            <h3 class="contacts__title">
+              <span class="contacts__title contacts__title--welcome">Приглашаем</span>
+              <span class="contacts__title contacts__title--cooperation">к сотрудничеству дилеров!</span>
+            </h3>
             <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></address>
           </div>
-          <img class="contacts__map" src="https://via.placeholder.com/150x150">
+          <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.3659818403135!2d30.322883941686143!3d59.937402299695364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1610377489655!5m2!1sru!2sua" width="320" height="362" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+          </iframe>
         </div>
       </section>
     </main>

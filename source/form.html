@@ -36,21 +36,23 @@
             <legend class="visually-hidden">Данные кота</legend>
             <div class="form__elements form__elements--data">
               <label class="form__label" for="cat-name">Имя:*</label>
-              <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик">
+              <input class="form__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" pattern="^[А-Яа-яЁё\s]+$">
             </div>
             <div class="form__elements form__elements--data">
               <label class="form__label form__label--data" for="cat-weight">Вес (кг):*</label>
-              <input class="form__input form__input--number" type="number" name="cat-weight" id="cat-weight" placeholder="7">
+              <input class="form__input form__input--number" type="number" name="cat-weight" id="cat-weight" placeholder="7" pattern="^[0-9]+$">
             </div>
             <div class="form__elements form__elements--data">
               <label class="form__label form__label--data" for="cat-age">Возраст (лет):</label>
-              <input class="form__input form__input--number form__input--age" type="number" name="cat-age" id="cat-age" placeholder="7">
+              <input class="form__input form__input--number form__input--age" type="number" name="cat-age" id="cat-age" placeholder="7" pattern="^[0-9]+$">
             </div>
           </fieldset>
           <fieldset class="form__fieldset form__fieldset--programm form__border">
             <legend class="visually-hidden">Выбор программы питания</legend>
             <div class="form__elements form__elements--slim">
+              <div>
               <input class="form__input form__input--radio" type="radio" name="programm" id="slim">
+              </div>
               <label class="form__label form__label--programm" for="slim">Похудение</label>
             </div>
             <div class="form__elements form__elements--weight-gain">
@@ -74,7 +76,7 @@
             </div>
             <div class="form__elements form__elements--owner">
               <label class="form__label form__label--phone" for="userphone">Телефон:*</label>
-              <input class="form__input form__input--phone" type="tel" name="userphone" id="userphone" placeholder="8 (960) 900-60-90">
+              <input class="form__input form__input--phone" type="tel" name="userphone" id="userphone" placeholder="8 (960) 900-60-90" pattern="^[0-9]+$">
             </div>
           </div>
         </fieldset>
@@ -183,6 +185,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

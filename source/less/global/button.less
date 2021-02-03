@@ -1,9 +1,17 @@
 .button {
   display: block;
-  /*min-width: 244px;*/
   .typography(normal, 400, 18px, 18px);
   background-color: @basic-green;
   color: @white;
   text-transform: uppercase;
   cursor: pointer;
+
+  &:hover {
+    background-color: @basic_green-2;
+  }
+
+  &:active {
+    background-color: @basic_green-2;
+    color: @basic_green-3;
+  }
 }

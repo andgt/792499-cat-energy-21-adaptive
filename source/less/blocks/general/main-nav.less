@@ -6,6 +6,10 @@
   @media (min-width: @tablet-width) {
     .offset(16px 0 0 0; 0 auto 24px 0);
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .main-nav__list {
@@ -146,6 +150,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 5px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -154,5 +159,26 @@
 .main-nav__link--color {
   @media (min-width: @desktop-width) {
     color: @white;
+  }
+}
+
+.main-nav__link {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+    box-shadow: 0 2px 0 0 @basic-green;
+  }
+}
+
+.main-nav__link--color {
+  &:active {
+    box-shadow: 0 2px 0 0 @white;
   }
 }

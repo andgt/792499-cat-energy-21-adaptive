@@ -43,6 +43,14 @@
   }
 }
 
+.page-footer__logo:hover {
+  opacity: 0.8;
+}
+
+.page-footer__logo:active {
+  opacity: 0.6;
+}
+
 .page-footer__developed {
   display: flex;
   flex-wrap: wrap;
@@ -81,5 +89,15 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 4px;
+  }
+}
+
+.page-footer__academy-icon {
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #c9e0bb;
   }
 }

@@ -30,8 +30,15 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 173px 1fr;
+    column-gap: 95px;
     margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 202px 1fr;
+    column-gap: 540px;
   }
 }
 
@@ -57,13 +64,11 @@
     height: 52px;
     padding: 0;
     margin-left: 0;
-    margin-right: 95px;
   }
 
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
-    margin-right: 540px;
   }
 }
 

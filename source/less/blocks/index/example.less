@@ -4,7 +4,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 42px 0 69px 0;
-    background: linear-gradient(to bottom, @white, @white 58%, @grey 58%, @grey);
+    background: linear-gradient(to bottom, @white, @white 57%, @grey 57%, @grey);
   }
 
   @media (min-width: @desktop-width) {
@@ -278,39 +278,96 @@
 
 .example__slider {
   .offset(0; 0 auto);
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    z-index: 1;
+    margin: 0 30px 13px 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 34px 27px;
+  }
+}
+
+.example__resize,
+.example__resize::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.example__resize {
+  @media (min-width: @tablet-width) {
+    left: 0;
+    width: 368px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, @white, @white 32.2%, @grey 32.2%, @grey);
+  }
+
+  @media (min-width: @desktop-width) {
+    background: linear-gradient(to bottom, @white, @white 36.2%, @grey 36.2%, @grey);
+  }
+}
+
+.example__resize::after {
+  content: "";
+  width: 0.1px;
+  background-color: transparent;
+  box-sizing: border-box;
+  right: 0;
+  height: 100%;
+  z-index: 20;
+}
+
+.example__transition {
+  transition: 0.3s;
+}
+
+.example__slider-image {
+  display: block;
+  width: 100%;
 }
 
 .example__slider-image--before {
-  display: none;
   width: 311px;
   height: 232px;
   .offset(0; 17px 0 30px 0);
 
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
+    max-width: 677px;
     width: 677px;
     height: 520px;
-    margin: 0 0 12px 45px;
+    margin: 0 0 0 30px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 35px 40px;
+    margin: 0 0 0 15px;
   }
 }
 
 .example__slider-image--after {
-  display: none;
   width: 251px;
   height: 240px;
   .offset(0; 18px 0 21px 36px);
 
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     width: 545px;
     height: 520px;
-    margin: 0 0 12px 96px;
+    margin: 0 0 0 118px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 35px 80px;
+    margin: 0 0 0 109px;
   }
 }
 
@@ -379,6 +436,10 @@
     background-color: @grey_neutral;
     border-bottom: 0;
   }
+}
+
+.example__input-range:focus {
+  outline: yellow;
 }
 
 .example__input-range::-moz-range-thumb {

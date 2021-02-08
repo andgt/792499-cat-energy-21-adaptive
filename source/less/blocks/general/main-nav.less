@@ -13,14 +13,15 @@
 }
 
 .main-nav__list {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   .offset(0; 0);
   list-style-type: none;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 
@@ -91,6 +92,10 @@
 
     &:nth-child(2) {
       margin-right: 37px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 0;
     }
 
     &:last-child {

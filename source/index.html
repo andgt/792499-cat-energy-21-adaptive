@@ -23,9 +23,9 @@
       background-image: url("img/desktop-images/desktop-index.jpg");
     }
   }
-  body {
+  /*body {
     opacity: 0.5;
-  }
+  }*/
 </style>
 <!-- // Pixel Glass -->
     <meta charset="utf-8">
@@ -118,17 +118,19 @@
           <div class="example__inner">
             <div class="example__slider">
               <picture>
-                <source media="(min-width: 768px)" srcset="img/tablet-images/before-tablet.png 1x, img/tablet-images/before-tablet@2x.png 2x">
-                <img class="example__image-visible example__slider-image example__slider-image--before" width="311" height="232" src="img/mobile-images/before-mobile.png" srcset="img/mobile-images/before-mobile@2x.png 2x" alt="Фотография кота до приема функционального питания">
-              </picture>
-              <picture>
-                <source media="(min-width: 768px)" srcset="img/tablet-images/after-tablet.png 1x, img/tablet-images/after-tablet@2x.png 2x">
-                <img class="example__slider-image example__slider-image--after" width="251" height="240" src="img/mobile-images/after-mobile.png" srcset="img/mobile-images/after-mobile@2x.png 2x" alt="Фотография кота после приема функционального питания">
-              </picture>
+                  <source media="(min-width: 768px)" srcset="img/tablet-images/after-tablet.png 1x, img/tablet-images/after-tablet@2x.png 2x">
+                  <img class="example__slider-image example__slider-image--after" width="251" height="240" src="img/mobile-images/after-mobile.png" srcset="img/mobile-images/after-mobile@2x.png 2x" alt="Фотография кота после приема функционального питания">
+                </picture>
+              <div class="example__resize">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/tablet-images/before-tablet.png 1x, img/tablet-images/before-tablet@2x.png 2x">
+                  <img class="example__image-visible example__slider-image example__slider-image--before" width="311" height="232" src="img/mobile-images/before-mobile.png" srcset="img/mobile-images/before-mobile@2x.png 2x" alt="Фотография кота до приема функционального питания">
+                </picture>
+              </div>
             </div>
             <div class="example__range">
               <label class="example__label example__label--left" for="example__label">Было</label>
-              <input class="example__input-range" type="range" min="1" max="2" name="range" value="1">
+              <input class="example__input-range" type="range" min="165" max="547" name="range" step="1" value="">
               <label class="example__label example__label--right" for="example__label">Стало</label>
             </div>
           </div>

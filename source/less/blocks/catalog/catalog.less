@@ -173,6 +173,14 @@
   }
 }
 
+.catalog__item .catalog__card-img {
+  @media (min-width: @tablet-width) {
+    min-width: 161px;
+    min-height: 172px;
+    margin-top: 36px;
+  }
+}
+
 .catalog__item:nth-child(1) .catalog__card-img {
   @media (min-width: @tablet-width) {
     width: 161px;
@@ -608,7 +616,7 @@
     justify-content: space-between;
     flex-direction: row;
     padding: 15px 0 16px;
-    .border(1px solid @special_grey; 0; 1px solid @special_grey; 0);
+    .border(1px solid @special_grey; 0; 0; 0);
   }
 }
 

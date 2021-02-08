@@ -159,15 +159,7 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.main-nav__link--color {
-  @media (min-width: @desktop-width) {
-    color: @white;
-  }
-}
-
-.main-nav__link {
   &:hover {
     opacity: 0.8;
   }
@@ -183,6 +175,10 @@
 }
 
 .main-nav__link--color {
+  @media (min-width: @desktop-width) {
+    color: @white;
+  }
+
   &:active {
     box-shadow: 0 2px 0 0 @white;
   }

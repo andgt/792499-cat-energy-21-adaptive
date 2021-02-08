@@ -468,9 +468,7 @@
     width: 169px;
     padding: 10px 0 10px;
   }
-}
 
-.catalog__button-show {
   &:hover {
     background-color: @special_grey-2;
   }
@@ -520,13 +518,9 @@
   }
 }
 
-.catalog__extra-title::before,
-.catalog__extra-title::after {
+.catalog__extra-title::before {
   content: "";
   position: absolute;
-}
-
-.catalog__extra-title::before {
   top: 15px;
   right: -20px;
   width: 100%;
@@ -544,6 +538,9 @@
 }
 
 .catalog__extra-title::after {
+  content: "";
+  position: absolute;
+
   @media (min-width: @tablet-width) {
     top: 23px;
     left: -30px;

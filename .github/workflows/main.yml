@@ -1,41 +1,28 @@
-# название
-name: Project test & build
-
-# целевые события для запуска
-# в данном случае это push и pull_request, в ветку prod
 on:
   push:
-    branches: master
+    branches:
+      - master
+  pull_request:
+    branches: '*'
 
-# выполняемые действия
+name: Project check
 jobs:
-  build-and-deploy:
+  check:
+    name: Check
     runs-on: ubuntu-latest
-
-    # запускаются по шагам
-    # name - название шага
-    # в github actions будет выводиться название шага, и процессы
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.18'
 
-      - name: Install 🔧
-        run: npm install
+    - uses: actions/checkout@master
+      name: Checkout
 
-      - name: Run Test 🔨
-        run: npm run test
+    - name: Install dependencies
+      run: |
+        npm install
 
-      - name: Build 👷
-        run: npm run build
-
-      - name: Deploy 🚀
-        uses: andgt.github.io/792499-cat-energy-21/
-        with:
-          # в значение GITHUB_TOKEN помещается ссылка на ваш секрет в репозитории
-          # в данном случае его название KEY
-          GITHUB_TOKEN: 61084142fda7f821915f9d645b407dd04fd4ad75
-          BRANCH: gh-pages
-          FOLDER: public
-          CLEAN: true
+    - name: Run checks
+      run: |
+        npm test

@@ -5,15 +5,13 @@ name: Project test & build
 # в данном случае это push и pull_request, в ветку prod
 on:
   push:
-    branches: [ prod ]
-  pull_request:
-    branches: [ prod ]
+    branches: master
 
 # выполняемые действия
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     # запускаются по шагам
     # name - название шага
     # в github actions будет выводиться название шага, и процессы

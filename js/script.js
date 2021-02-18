@@ -24,8 +24,6 @@ let imageBefore = document.querySelector('.example__slider-image--before');
 let range = document.querySelector('.example__input-range');
 let gallery = document.querySelector(".example__gallery");
 let resize = document.querySelector(".example__resize");
-let mobileWidthOnly = window.matchMedia("(max-width: 767px)");
-let tabletWidth = window.matchMedia("(min-width: 768px)");
 
 function mobileWidth () {
   range.value = 165;

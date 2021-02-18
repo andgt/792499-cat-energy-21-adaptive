@@ -134,7 +134,7 @@ a {
 }
 @media (min-width: 1440px) {
   .page-header__container {
-    grid-template-columns: 202px 1fr;
+    grid-template-columns: 202px 479px;
     -moz-column-gap: 540px;
          column-gap: 540px;
   }
@@ -482,7 +482,7 @@ a {
     margin: 0 35px 0 0;
   }
   .main-nav__item:nth-child(2) {
-    margin-right: 33px;
+    margin-right: 32px;
   }
   .main-nav__item:last-child {
     margin-right: 0;

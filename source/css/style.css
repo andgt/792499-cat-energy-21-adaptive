@@ -1483,6 +1483,7 @@ a {
   border-bottom: 1px solid #cdcdcd;
   border-left: 1px solid #cdcdcd;
   border-radius: 6px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .example__input-range {

@@ -1,3 +1,5 @@
+'use strict'
+
 // Слайдер Было-стало
 
 let imageAfter = document.querySelector('.example__slider-image--after');

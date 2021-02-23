@@ -1,4 +1,6 @@
 const gulp = require("gulp");
+const ghPages = require("gh-pages");
+const path = require("path");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
@@ -158,6 +160,14 @@ const build = gulp.series(
   ));
 
 exports.build = build;
+
+//gh-pages
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+
+exports.deploy = deploy;
 
 // Default
 
